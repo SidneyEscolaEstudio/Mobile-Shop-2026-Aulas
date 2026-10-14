@@ -1,23 +1,23 @@
 function Carrinho({ carrinho }) {
-  const ultimoProduto = carrinho.at(-1);
-
   return (
     <section className="carrinho">
-      <h2>Carrinho</h2>
+      <h2>Meu Carrinho ({carrinho.length})</h2>
 
-      {!ultimoProduto ? (
+      {carrinho.length === 0 ? (
         <p>Seu carrinho está vazio.</p>
       ) : (
-        <div className="item-carrinho">
-          <span className="produto-emoji" aria-hidden="true">{ultimoProduto.emoji}</span>
-          <div>
-            <strong>{ultimoProduto.nome}</strong>
-            <p>R$ {ultimoProduto.preco.toFixed(2)}</p>
+        carrinho.map((produto) => (
+          <div key={produto.id} className="item-carrinho">
+            <span className="produto-emoji" aria-hidden="true">{produto.emoji}</span>
+            <div>
+              <strong>{produto.nome}</strong>
+              <p>R$ {produto.preco.toFixed(2)}</p>
+            </div>
           </div>
-        </div>
+        ))
       )}
 
-      <small>Aula 05: confirme se o produto clicado chega ao Carrinho.</small>
+      <small>Aula 06: o Carrinho recebe o estado e lista todos os produtos adicionados.</small>
     </section>
   );
 }
