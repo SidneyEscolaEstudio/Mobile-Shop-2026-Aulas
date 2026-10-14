@@ -17,7 +17,7 @@ function App() {
           <strong className="logo">MobileTech</strong>
           <span>Mobile Shop</span>
         </div>
-        <span className="aula-badge">Aula 05</span>
+        <span className="aula-badge">Aula 06</span>
       </header>
 
       <div className="conteudo">
