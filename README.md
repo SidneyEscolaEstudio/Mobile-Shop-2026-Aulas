@@ -20,10 +20,31 @@ O projeto final é um **protótipo funcional de front-end**. API, banco de dados
 Os materiais didáticos usam nomes em português, como `Carrinho.jsx`, `carrinho`, `preco`, `quantidade` e `adicionarProduto`, para manter correspondência direta entre os slides e o código.
 
 ## Versões por aula
-Cada etapa será mantida em uma branch própria:
+Cada etapa é mantida em uma branch própria:
 - `aula-05`
 - `aula-06`
 - `aula-07`
 - `aula-08`
+- `aula-09`
+- `aula-10`
 
 Assim o professor pode abrir exatamente a versão correspondente à aula sem antecipar conteúdos posteriores.
+
+## Uso em sala
+Antes de iniciar uma aula, selecione a branch correspondente. Exemplo:
+
+```bash
+git switch aula-05
+```
+
+Depois, nas aulas seguintes, troque apenas para a próxima branch:
+
+```bash
+git switch aula-06
+git switch aula-07
+git switch aula-08
+git switch aula-09
+git switch aula-10
+```
+
+Não é necessário recriar o projeto a cada aula; basta trocar para a branch correta e executar o projeto.
