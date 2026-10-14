@@ -1,0 +1,82 @@
+* { box-sizing: border-box; }
+
+:root {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  color: #0f172a;
+  background: #f3f7fb;
+}
+
+body { margin: 0; }
+button { font: inherit; }
+
+.app { min-height: 100vh; }
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 28px;
+  color: white;
+  background: linear-gradient(90deg, #071a33, #123b73);
+}
+
+.topo > div { display: flex; flex-direction: column; }
+.logo { font-size: 1.5rem; color: #38bdf8; }
+.aula-badge { background: #2563eb; padding: 8px 14px; border-radius: 999px; font-weight: 700; }
+
+.conteudo {
+  width: min(1180px, calc(100% - 32px));
+  margin: 28px auto;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+.hero,
+.carrinho,
+.produto-card {
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.hero { padding: 24px; margin-bottom: 18px; }
+.hero h1 { margin: 4px 0 8px; font-size: 2rem; }
+.eyebrow { color: #2563eb; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+
+.grade-produtos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.produto-card { padding: 20px; }
+.produto-card h3 { margin: 10px 0 6px; }
+.produto-card p { font-weight: 700; color: #2563eb; }
+.produto-card button {
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  padding: 11px 14px;
+  color: white;
+  background: #2563eb;
+  cursor: pointer;
+}
+.produto-card button:hover { background: #1d4ed8; }
+.produto-emoji { font-size: 3rem; }
+
+.carrinho {
+  position: sticky;
+  top: 18px;
+  padding: 22px;
+}
+.carrinho h2 { margin-top: 0; }
+.item-carrinho { display: flex; gap: 12px; align-items: center; padding: 14px 0; }
+.carrinho small { display: block; margin-top: 14px; color: #64748b; }
+
+@media (max-width: 800px) {
+  .conteudo { grid-template-columns: 1fr; }
+  .grade-produtos { grid-template-columns: 1fr; }
+  .carrinho { position: static; }
+}
